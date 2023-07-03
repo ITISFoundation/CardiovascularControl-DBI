@@ -47,11 +47,3 @@ jobs:
           echo "Docker image tag is ${DOCKER_IMAGE_TAG}"
           make tag-version
           make push
-      - if: github.event_name == 'push' && ${{ github.event.pull_request.merged }}
-        name: Event is PR is merged
-        run: |
-          ./.github/dockerhub_login.bash
-          DOCKER_IMAGE_TAG=$(< VERSION)
-          echo "Docker image tag is ${DOCKER_IMAGE_TAG}"
-          make tag-version
-          make push
