@@ -1,5 +1,4 @@
-# TODO: Please set your custom image here and adapt the Dockerfile/entrypoint.sh accordingly
-FROM matlabll
+FROM demartis/matlab-runtime:R2020b as base
 #
 #  USAGE:
 #     cd services/cardio_control
@@ -16,12 +15,6 @@ RUN adduser --uid ${SC_USER_ID} --disabled-password --gecos "" --shell /bin/sh -
 
 RUN apt-get update \
     && apt-get -y install --no-install-recommends \
-    libnss3-dev \
-    libpangocairo-1.0-0 \
-    libasound2 \
-    libcups2 \
-    libatk1.0-0 \   
-    libgdk-pixbuf2.0-0 \
     jq \
     && rm --recursive --force /var/lib/apt/lists/*
 
@@ -35,29 +28,11 @@ FROM base as build
 
 ENV SC_BUILD_TARGET build
 
-# ------------------------------------------------------------------------------------
-#TODO:
-# uncomment and adapt if build dependencies shall be installed
-#RUN apt-get update \
-# && apt-get -y install --no-install-recommends \
-# gcc \
-# git \
-# && rm -rf /var/lib/apt/lists/*
-
-# uncomment and adapt if python necessary
-#RUN $SC_PIP install --upgrade pip wheel setuptools
-# ------------------------------------------------------------------------------------
-
 WORKDIR /build
-# defines the output of the build
-RUN mkdir --parents /build/bin
-# copy src code
-COPY --chown=${SC_USER_NAME}:${SC_USER_NAME} src/cardio_control src/cardio_control
-# ------------------------------------------------------------------------------------
-#TODO:
-# uncomment and adapt if build steps are necessary
-# RUN cp -R src/cardio_control/* /build/bin
-# ------------------------------------------------------------------------------------
+
+# copy src code: Matlab executable and script to launch it produced with Matlab Compiler (`mcc` command)
+COPY --chown=${SC_USER_NAME}:${SC_USER_NAME} src/cardio_control cardio_control
+
 
 # --------------------------Production stage -------------------
 # Final cleanup up to reduce image size and startup setup
@@ -81,11 +56,17 @@ ENV INPUT_FOLDER="/input" \
 WORKDIR /home/${SC_USER_NAME}
 
 # ------------------------------------------------------------------------------------
-#TODO:
+
 # uncomment and adapt to install runtime dependencies
-#RUN apt-get update \
-# && apt-get -y install --no-install-recommends \
-# && rm -rf /var/lib/apt/lists/*
+RUN apt-get update \
+ && apt-get -y install --no-install-recommends \
+    libnss3-dev \
+    libpangocairo-1.0-0 \
+    libasound2 \
+    libcups2 \
+    libatk1.0-0 \   
+    libgdk-pixbuf2.0-0 \
+ && rm -rf /var/lib/apt/lists/*
 # ------------------------------------------------------------------------------------
 
 # copy docker bootup scripts
@@ -96,7 +77,7 @@ COPY --chown=${SC_USER_NAME}:${SC_USER_NAME} service.cli/ service.cli/
 ENV PATH="/home/${SC_USER_NAME}/service.cli:${PATH}"
 
 # copy binaries from build
-COPY --from=build --chown=${SC_USER_NAME}:${SC_USER_NAME} /build/bin cardio_control
+COPY --from=build --chown=${SC_USER_NAME}:${SC_USER_NAME} /build/cardio_control cardio_control
 
 # ------------------------------------------------------------------------------------
 #TODO:

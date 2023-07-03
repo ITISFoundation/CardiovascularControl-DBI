@@ -4,6 +4,6 @@ settings:
     type: Resources
     value:
       Limits:
-        NanoCPUs: 1000000000 # 100% of CPU cycles on 1 CPU 
-        MemoryBytes: 2147483648 # 2 Gigabytes
+        NanoCPUs: 2000000000 # 100% of CPU cycles on 1 CPU 
+        MemoryBytes: 4294967296 # 4 Gigabytes
 

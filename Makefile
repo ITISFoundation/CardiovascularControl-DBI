@@ -10,7 +10,7 @@ export VCS_STATUS := $(if $(shell git status -s 2> /dev/null || echo unversioned
 export BUILD_DATE := $(shell date -u +"%Y-%m-%dT%H:%M:%SZ")
 
 export DOCKER_REGISTRY   ?= itisfoundation
-export DOCKER_IMAGE_NAME ?= cardiocascularcontrol
+export DOCKER_IMAGE_NAME ?= cardiovascularcontrol-dbi
 export DOCKER_IMAGE_TAG  ?= $(shell cat VERSION 2> /dev/null || echo undefined)
 
 export COMPOSE_INPUT_DIR  := ./validation/input

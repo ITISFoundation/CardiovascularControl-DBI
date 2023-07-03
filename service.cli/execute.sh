@@ -18,17 +18,14 @@ echo
 
 # put the code to execute the service here
 # For example:
-env
-ls -al "${INPUT_FOLDER}"
+
+echo "Running Matlab/Simulink model with inputs ${INPUT_1}, ${INPUT_2}"
+./run_ICN_model_osparc_mcc_func.sh /opt/mcr/v99/ $INPUT_1 $INPUT_2
 
 # then retrieve the output and move it to the $OUTPUT_FOLDER
 # as defined in the output labels
 # For example: cp output.csv $OUTPUT_FOLDER or to $OUTPUT_FOLDER/outputs.json using jq
-#TODO: Replace following
-cat > "${OUTPUT_FOLDER}"/outputs.json << EOF
-{
-    "output_1":"some_stuff",
-    "output_2":"some_stuff"
-}
-EOF
 
+echo "Copying outputs..."
+cp *png $OUTPUT_FOLDER/ 
+cp *txt $OUTPUT_FOLDER/ 
