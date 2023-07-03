@@ -4,12 +4,15 @@ type: computational
 integration-version: 1.0.0
 version: 1.0.0
 description: Cardiovascular Control model developed at Daniel Naugh Institute, see original repository [here](https://github.com/Daniel-Baugh-Institute/CardiovascularControl).
-contact: 18575092+elisabettai@users.noreply.github.com
+contact: iavarone@itis.swiss
 thumbnail: https://github.com/ITISFoundation/osparc-assets/blob/cb43207b6be2f4311c93cd963538d5718b41a023/assets/default-thumbnail-cookiecutter-osparc-service.png?raw=true
 authors:
   - name: Elisabetta Iavarone
-    email: 18575092+elisabettai@users.noreply.github.com
+    email: iavarone@itis.swiss
     affiliation: IT'IS Foundation
+  - name: Michelle Gee
+    email: mmgee@udel.edu
+    affiliation: Daniel Baugh Institute of Functional Genomics/Computational Biology, Department of Pathology and Genomic Medicine, Thomas Jefferson University, Philadelphia, Pennsylvania, USA
 inputs:
   input_1:
     displayOrder: 1
@@ -35,6 +38,8 @@ outputs:
     label: Output figure
     description: Figure showing RR intervals (inverse of heart rage), systemic arterial pressure and left ventricular elastance
     type: data:*/*
+    fileToKeyMap:
+      RR_Psa_Emaxlv.png: output_1
   output_2:
     displayOrder: 2
     label: Arterial Pressure

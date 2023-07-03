@@ -25,7 +25,9 @@ echo "Running Matlab/Simulink model with inputs ${INPUT_1}, ${INPUT_2}"
 # then retrieve the output and move it to the $OUTPUT_FOLDER
 # as defined in the output labels
 # For example: cp output.csv $OUTPUT_FOLDER or to $OUTPUT_FOLDER/outputs.json using jq
+echo "These files were produced:"
+ls
 
 echo "Copying outputs..."
-cp *png $OUTPUT_FOLDER/ 
+cp RR_Psa_Emaxlv.png $OUTPUT_FOLDER/
 cp *txt $OUTPUT_FOLDER/ 

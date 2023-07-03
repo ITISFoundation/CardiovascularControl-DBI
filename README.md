@@ -17,7 +17,7 @@ $ make build
 $ make publish-local 
 ```
 
-**Note**: the code and executable in `src/cardio_control/` has been generated using [MATLAB Compiler](https://ch.mathworks.com/products/compiler.html), v2020b. This requires a valid MATLAB license. 
+**Note**: the code (.sh file) and executable in `src/cardio_control/` has been generated using [MATLAB Compiler](https://ch.mathworks.com/products/compiler.html), v2020b. This requires a valid MATLAB license. 
 
 To compile the executable that can be run with Matlab Runtime as a standalone application:
 ```console
