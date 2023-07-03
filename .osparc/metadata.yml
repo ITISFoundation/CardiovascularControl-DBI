@@ -1,0 +1,46 @@
+name: CardiocascularControl
+key: simcore/services/comp/cardiocascularcontrol
+type: computational
+integration-version: 1.0.0
+version: 1.0.0
+description: Cardiovascular Control model developed at Daniel Naugh Institute
+contact: 18575092+elisabettai@users.noreply.github.com
+thumbnail: https://github.com/ITISFoundation/osparc-assets/blob/cb43207b6be2f4311c93cd963538d5718b41a023/assets/default-thumbnail-cookiecutter-osparc-service.png?raw=true
+authors:
+  - name: Elisabetta Iavarone
+    email: 18575092+elisabettai@users.noreply.github.com
+    affiliation: IT'IS Foundation
+inputs:
+  input_1:
+    displayOrder: 1
+    label: input_1_label
+    description: The input 1 description
+    type: string
+    defaultValue: some_value(optional)
+    fileToKeyMap:
+      somefilename.ext: input_1
+  input_2:
+    displayOrder: 2
+    label: input_2_label
+    description: The input 2 description
+    type: string
+    defaultValue: some_value(optional)
+    fileToKeyMap:
+      somefilename.ext: input_2
+  
+outputs:
+  output_1:
+    displayOrder: 1
+    label: output_1_label
+    description: The input 1 description
+    type: string
+    fileToKeyMap:
+      somefilename.ext: output_1
+  output_2:
+    displayOrder: 2
+    label: output_2_label
+    description: The input 2 description
+    type: string
+    fileToKeyMap:
+      somefilename.ext: output_2
+  
