@@ -5,7 +5,7 @@ integration-version: 1.0.0
 version: 1.0.0
 description: Cardiovascular Control model developed at Daniel Naugh Institute, see original repository [here](https://github.com/Daniel-Baugh-Institute/CardiovascularControl).
 contact: iavarone@itis.swiss
-thumbnail: https://github.com/ITISFoundation/osparc-assets/blob/cb43207b6be2f4311c93cd963538d5718b41a023/assets/default-thumbnail-cookiecutter-osparc-service.png?raw=true
+thumbnail: https://github.com/ITISFoundation/osparc-assets/blob/main/assets/CardiovascularControl-DBI.jpg?raw=true
 authors:
   - name: Elisabetta Iavarone
     email: iavarone@itis.swiss
