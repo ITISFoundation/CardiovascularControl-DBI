@@ -3,8 +3,7 @@ key: simcore/services/comp/cardiovascularcontrol-dbi
 type: computational
 integration-version: 1.0.0
 version: 1.0.1
-description: Cardiovascular Control model developed at Daniel Naugh Institute, see
-  original repository [here](https://github.com/Daniel-Baugh-Institute/CardiovascularControl).
+description: Cardiovascular Control model developed at Daniel Naugh Institute, see original repository [here](https://github.com/Daniel-Baugh-Institute/CardiovascularControl).
 contact: iavarone@itis.swiss
 thumbnail: https://github.com/ITISFoundation/osparc-assets/blob/main/assets/CardiovascularControl-DBI.jpg?raw=true
 authors:
@@ -39,32 +38,28 @@ outputs:
   output_1:
     displayOrder: 1
     label: Output figure
-    description: Figure showing RR intervals (inverse of heart rage), systemic arterial
-      pressure and left ventricular elastance
+    description: Figure showing RR intervals (inverse of heart rage), systemic arterial pressure and left ventricular elastance
     type: data:*/*
     fileToKeyMap:
       RR_Psa_Emaxlv.png: output_1
   output_2:
     displayOrder: 2
     label: Arterial Pressure
-    description: Tabular (2-column) data with Time (s) and mean arterial pressure
-      (mm Hg)
+    description: Tabular (2-column) data with Time (s) and mean arterial pressure (mm Hg)
     type: data:*/*
     fileToKeyMap:
       ArterialPressure.txt: output_2
   output_3:
     displayOrder: 3
     label: Elastance
-    description: Tabular (2-column) data with Time (s) and left ventricular elastance
-      (mm Hg/mL)
+    description: Tabular (2-column) data with Time (s) and left ventricular elastance (mm Hg/mL)
     type: data:*/*
     fileToKeyMap:
       Elastance.txt: output_3
   output_4:
     displayOrder: 4
     label: RR intervals
-    description: Tabular (2-column) data with Time (s) and RR intervals (s) (inverse
-      of heart rate)
+    description: Tabular (2-column) data with Time (s) and RR intervals (s) (inverse of heart rate)
     type: data:*/*
     fileToKeyMap:
       RRintervals.txt: output_4
