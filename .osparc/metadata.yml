@@ -12,9 +12,7 @@ authors:
   affiliation: IT'IS Foundation
 - name: Michelle Gee
   email: mmgee@udel.edu
-  affiliation: Daniel Baugh Institute of Functional Genomics/Computational Biology,
-    Department of Pathology and Genomic Medicine, Thomas Jefferson University, Philadelphia,
-    Pennsylvania, USA
+  affiliation: Daniel Baugh Institute of Functional Genomics/Computational Biology, Department of Pathology and Genomic Medicine, Thomas Jefferson University, Philadelphia, Pennsylvania, USA
 inputs:
   input_1:
     displayOrder: 1
