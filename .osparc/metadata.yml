@@ -1,35 +1,35 @@
-name: CardiocascularControl DBI
+name: Cardiovascular Control DBI
 key: simcore/services/comp/cardiovascularcontrol-dbi
 type: computational
 integration-version: 1.0.0
-version: 1.0.0
+version: 1.0.1
 description: Cardiovascular Control model developed at Daniel Naugh Institute, see original repository [here](https://github.com/Daniel-Baugh-Institute/CardiovascularControl).
 contact: iavarone@itis.swiss
 thumbnail: https://github.com/ITISFoundation/osparc-assets/blob/main/assets/CardiovascularControl-DBI.jpg?raw=true
 authors:
-  - name: Elisabetta Iavarone
-    email: iavarone@itis.swiss
-    affiliation: IT'IS Foundation
-  - name: Michelle Gee
-    email: mmgee@udel.edu
-    affiliation: Daniel Baugh Institute of Functional Genomics/Computational Biology, Department of Pathology and Genomic Medicine, Thomas Jefferson University, Philadelphia, Pennsylvania, USA
+- name: Elisabetta Iavarone
+  email: iavarone@itis.swiss
+  affiliation: IT'IS Foundation
+- name: Michelle Gee
+  email: mmgee@udel.edu
+  affiliation: Daniel Baugh Institute of Functional Genomics/Computational Biology, Department of Pathology and Genomic Medicine, Thomas Jefferson University, Philadelphia, Pennsylvania, USA
 inputs:
   input_1:
     displayOrder: 1
     label: VNS aff. frequency
-    description: Afferent vagus nerve stimulation (VNS) frequency 
+    description: Afferent vagus nerve stimulation (VNS) frequency
     defaultValue: 1
     type: ref_contentSchema
-    contentSchema: 
+    contentSchema:
       title: VNS aff. frequency
       type: number
   input_2:
     displayOrder: 2
     label: VNS eff. frequency
-    description: Efferent vagus nerve stimulation (VNS) frequency 
+    description: Efferent vagus nerve stimulation (VNS) frequency
     defaultValue: 0.5
     type: ref_contentSchema
-    contentSchema: 
+    contentSchema:
       title: VNS eff. frequency
       type: number
 outputs:
@@ -61,4 +61,3 @@ outputs:
     type: data:*/*
     fileToKeyMap:
       RRintervals.txt: output_4
-  
