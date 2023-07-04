@@ -1,64 +1,70 @@
-name: CardiocascularControl DBI
+name: Cardiovascular Control DBI
 key: simcore/services/comp/cardiovascularcontrol-dbi
 type: computational
 integration-version: 1.0.0
-version: 1.0.0
-description: Cardiovascular Control model developed at Daniel Naugh Institute, see original repository [here](https://github.com/Daniel-Baugh-Institute/CardiovascularControl).
+version: 1.0.1
+description: Cardiovascular Control model developed at Daniel Naugh Institute, see
+  original repository [here](https://github.com/Daniel-Baugh-Institute/CardiovascularControl).
 contact: iavarone@itis.swiss
 thumbnail: https://github.com/ITISFoundation/osparc-assets/blob/main/assets/CardiovascularControl-DBI.jpg?raw=true
 authors:
-  - name: Elisabetta Iavarone
-    email: iavarone@itis.swiss
-    affiliation: IT'IS Foundation
-  - name: Michelle Gee
-    email: mmgee@udel.edu
-    affiliation: Daniel Baugh Institute of Functional Genomics/Computational Biology, Department of Pathology and Genomic Medicine, Thomas Jefferson University, Philadelphia, Pennsylvania, USA
+- name: Elisabetta Iavarone
+  email: iavarone@itis.swiss
+  affiliation: IT'IS Foundation
+- name: Michelle Gee
+  email: mmgee@udel.edu
+  affiliation: Daniel Baugh Institute of Functional Genomics/Computational Biology,
+    Department of Pathology and Genomic Medicine, Thomas Jefferson University, Philadelphia,
+    Pennsylvania, USA
 inputs:
   input_1:
     displayOrder: 1
     label: VNS aff. frequency
-    description: Afferent vagus nerve stimulation (VNS) frequency 
+    description: Afferent vagus nerve stimulation (VNS) frequency
     defaultValue: 1
     type: ref_contentSchema
-    contentSchema: 
+    contentSchema:
       title: VNS aff. frequency
       type: number
   input_2:
     displayOrder: 2
     label: VNS eff. frequency
-    description: Efferent vagus nerve stimulation (VNS) frequency 
+    description: Efferent vagus nerve stimulation (VNS) frequency
     defaultValue: 0.5
     type: ref_contentSchema
-    contentSchema: 
+    contentSchema:
       title: VNS eff. frequency
       type: number
 outputs:
   output_1:
     displayOrder: 1
     label: Output figure
-    description: Figure showing RR intervals (inverse of heart rage), systemic arterial pressure and left ventricular elastance
+    description: Figure showing RR intervals (inverse of heart rage), systemic arterial
+      pressure and left ventricular elastance
     type: data:*/*
     fileToKeyMap:
       RR_Psa_Emaxlv.png: output_1
   output_2:
     displayOrder: 2
     label: Arterial Pressure
-    description: Tabular (2-column) data with Time (s) and mean arterial pressure (mm Hg)
+    description: Tabular (2-column) data with Time (s) and mean arterial pressure
+      (mm Hg)
     type: data:*/*
     fileToKeyMap:
       ArterialPressure.txt: output_2
   output_3:
     displayOrder: 3
     label: Elastance
-    description: Tabular (2-column) data with Time (s) and left ventricular elastance (mm Hg/mL)
+    description: Tabular (2-column) data with Time (s) and left ventricular elastance
+      (mm Hg/mL)
     type: data:*/*
     fileToKeyMap:
       Elastance.txt: output_3
   output_4:
     displayOrder: 4
     label: RR intervals
-    description: Tabular (2-column) data with Time (s) and RR intervals (s) (inverse of heart rate)
+    description: Tabular (2-column) data with Time (s) and RR intervals (s) (inverse
+      of heart rate)
     type: data:*/*
     fileToKeyMap:
       RRintervals.txt: output_4
-  
