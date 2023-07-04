@@ -1,6 +1,6 @@
 version: "3.7"
 services:
-  cardio_control:
+  cardiovascularcontrol-dbi:
     build:
       dockerfile: docker/custom/Dockerfile
       target: production
