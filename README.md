@@ -3,7 +3,7 @@
 Source code of the `cardiovascular-dbi` service on o²S²PARC for the Cardiovascular Control model developed at the Daniel Naugh Institute, see original repository [here](https://github.com/Daniel-Baugh-Institute/CardiovascularControl/tree/main/v03)
 
 ## Citing the original model
-If you find this repository useful for your academic work, please consider the associated publication:
+If you find this repository useful for your academic work, please consider citing the associated publication:
 
 Gee, M. M., Lenhoff, A. M., Schwaber, J. S., Ogunnaike, B. A., & Vadigepalli, R. (2023). Closed‐loop modeling of central and intrinsic cardiac nervous system circuits underlying cardiovascular control. AIChE Journal, 69(4), e18033. https://doi.org/10.1002/aic.18033
 
