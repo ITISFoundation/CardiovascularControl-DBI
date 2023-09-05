@@ -1,6 +1,6 @@
 # Closed-loop modeling of intrinsic cardiac nervous system contributions to respiratory sinus arrhythmia
 
-Source code of the `cardiovascular-dbi` service on o²S²PARC for the Cardiovascular Control model developed at the Daniel Naugh Institute, see original repository [here](https://github.com/Daniel-Baugh-Institute/CardiovascularControl/tree/main/v03)
+Source code of the `cardiovascular-dbi` service on o²S²PARC for the Cardiovascular Control model developed at the Daniel Baugh Institute, see original repository [here](https://github.com/Daniel-Baugh-Institute/CardiovascularControl/tree/main/v03)
 
 ## Citing the original model
 If you find this repository useful for your academic work, please consider citing the associated publication:
